@@ -10,12 +10,27 @@ GET HTTP://LOCALHOST:3000/books/0
 
 ###
 
-GET HTTP://LOCALHOST:3000/books http/1.1
-
+POST HTTP://LOCALHOST:3000/books http/1.1
 Content-Type: application/json
 
 {
-    "name": "El Lute Camina o Revienta",
+    "name": "El Lute, Camina o Revienta",
     "author": "Eleuterio Sanchez",
     "year": 1977
 }
+
+
+###
+
+PUT HTTP://LOCALHOST:3000/books/3 http/1.1
+Content-Type: application/json
+
+{
+    "name": "El Lute",
+    "author": "Eleuterio Sanchez",
+    "year": 1977
+}
+
+###
+
+DELETE HTTP://LOCALHOST:3000/books/3 http/1.1
